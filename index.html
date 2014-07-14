@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+        <script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+        
+  </head>
+
+  <body>
+    
+           
+        <div class="container-fluid" style="width: 750px;">
+          <h1>Move items between Tables</h1>
+          <uL>
+            <li>Double click on row to move item to other table.</li>
+            <li>User blue buttons to move items to other table.</li>
+
+          </uL>
+          <br/>
+            <div class="row">
+                <div style="" class="col-md-4">
+
+                  <h3>Available User</h3>
+                            <table id="availableTable" class="table table-condensed table-hover validatorTable">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+        
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+                </div>
+                <div class="col-md-1" style="text-align: center; padding-top: 137px;">
+                    <ul class="list-unstyled frBUttons">
+                        <li>
+                            <button type="button" id="AddAll" class="btn btn-primary btn-xs validationBtn">>>&nbsp;</button></li>
+                        <li>
+                            <button type="button" id="AddSelected" class="btn btn-primary btn-sm validationBtn">></button></li>
+                        <li>
+                            <button type="button" id="RemoveSelected" class="btn btn-primary btn-sm validationBtn">< </button>
+                        </li>
+                        <li>
+                            <button type="button" id="RemoveAll" class="btn btn-primary btn-xs validationBtn">&nbsp;<<</button></li>
+                    </ul>
+                </div>
+                <div style="" class="col-md-4">
+                    <h3>Validators</h3>
+
+
+                            <table id="validatorTable" class="table table-condensed table-hover validatorTable" >
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                   
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                </tr>                                
+                              </tbody>
+                            </table>
+                </div>
+            </div>
+            <div class="row" style="float: right;">
+
+                <asp:LinkButton ID="btnConfirm" runat="server"
+                    Text="<span aria-hidden=true >Confirm</span>"
+                    CssClass="btn btn-primary btn-success" OnClick="btnConfirm_Click" />
+
+            </div>
+
+        </div>
+  </body>
+
+</html>
